@@ -13,14 +13,6 @@
         <ul>
     	   <?php wp_list_categories('show_count=1&title_li='); ?>
         </ul>
-        
-    	<?php wp_list_bookmarks(); ?>
-    	
-    	<h2>Subscribe</h2>
-    	<ul>
-    		<li><a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a></li>
-    		<li><a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a></li>
-    	</ul>
 	
 	<?php endif; ?>
 
