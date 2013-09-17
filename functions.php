@@ -9,7 +9,7 @@ include('functions/setup.php');
 include('functions/sidebars.php');
 
 // woocommerce
-include('woocommerce-functions.php');
+include('functions/woocommerce.php');
 
 // custom comment layout
 include('functions/comments.php');
