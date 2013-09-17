@@ -1,6 +1,6 @@
 <?php
 /* ==============================================================
-		Wrap the product list in a section
+		Wrap the product list in a section tag
 ============================================================== */
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
