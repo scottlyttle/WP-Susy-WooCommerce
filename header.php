@@ -24,7 +24,7 @@
 	<![endif]-->
 	
 	<!-- Make sure to create a custom build of Modernizr before launching! -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/build/modernizr-respond.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/build/modernizr-respond.js"></script>
 	<?php wp_head(); ?>
 </head>
 

@@ -1,9 +1,8 @@
 .DS_Store
 .sass-cache
+node_modules
 
 # Add the below once cloned
 # .gitignore
-# js/.jshintrc
 # Gruntfile.js
 # package.json
-# node_modules
