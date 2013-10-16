@@ -20,7 +20,7 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<!--[if IE]>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/ie.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/build/ie.css" />
 	<![endif]-->
 	
 	<!-- Make sure to create a custom build of Modernizr before launching! -->
