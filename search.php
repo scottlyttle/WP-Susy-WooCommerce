@@ -2,17 +2,17 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2>Search Results for: "<?php echo get_search_query(); ?>"</h2>
+		<h1>Search Results for: "<?php echo get_search_query(); ?>"</h1>
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'search' ); ?>
+			<?php get_template_part( 'content', 'post-loop' ); ?>
 
 		<?php endwhile; ?>
 
 	<?php else : ?>
 
-		<h2>No posts found.</h2>
+		<h1>No posts found.</h1>
 
 	<?php endif; ?>
 

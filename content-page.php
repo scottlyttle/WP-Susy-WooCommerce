@@ -1,9 +1,7 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header>
+<article id="page-<?php the_ID(); ?>" <?php post_class('primary_content'); ?>>
+	
+	<h1><?php the_title(); ?></h1>
+	
+	<?php the_content(); ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-</article>
+</article><!-- primary_content -->

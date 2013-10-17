@@ -1,16 +1,18 @@
 <?php
 if ( ! function_exists( 'yabtfw_setup' ) ) :
-	function frankiewp_setup() {
+	function yabtfw_setup() {
 		//Enable support for Post Thumbnails
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location
-		register_nav_menus( array(
+		register_nav_menus(array(
 			'primary' => __( 'Primary Menu', 'yabtfw' ),
-		) );
+		));
 
 		//Enable support for Post Formats
-		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+		add_theme_support( 'post-formats', array( 
+			'aside', 'image', 'video', 'quote', 'link' 
+		));
 	}
 endif;
 add_action( 'after_setup_theme', 'yabtfw_setup' );

@@ -9,28 +9,25 @@ if ( post_password_required() ) { ?>
 
 <?php if ( have_comments() ) : ?>
 	
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
+	<h2 class="comments_title"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
 
-	<div class="navigation">
-		<div class="next-posts"><?php previous_comments_link() ?></div>
-		<div class="prev-posts"><?php next_comments_link() ?></div>
-	</div>
-
-	<ol class="commentlist">
+	<ol class="comment_list">
 		<?php wp_list_comments('type=comment&callback=yabtfw_comment'); ?>
 	</ol>
 
-	<div class="navigation">
-		<div class="next-posts"><?php previous_comments_link() ?></div>
-		<div class="prev-posts"><?php next_comments_link() ?></div>
-	</div>
+	<nav class="navigation">
+		<div class="next_comments"><?php previous_comments_link() ?></div>
+		<div class="prev_comments"><?php next_comments_link() ?></div>
+	</nav>
 	
- <?php else : // this is displayed if there are no comments so far ?>
+<?php else : ?>
 
 	<?php if ( comments_open() ) : ?>
-		<!-- If comments are open, but there are no comments. -->
 
-	 <?php else : // comments are closed ?>
+		<h4>Be the first to comment</h4>
+
+	 <?php else : ?>
+		
 		<p>Comments are closed.</p>
 
 	<?php endif; ?>
@@ -40,7 +37,9 @@ if ( post_password_required() ) { ?>
 <?php if ( comments_open() ) : ?>
 
 <div id="respond">
+
 	<?php include (TEMPLATEPATH . '/inc/respond.php' ); ?>
+	
 </div>
 
 <?php endif; ?>
