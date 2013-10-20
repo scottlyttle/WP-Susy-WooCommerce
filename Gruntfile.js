@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 }
             },
             files: {
-                src: ['js/source/*.js']
+                src: ['js/scripts/*.js']
             },
         },
         concat: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 preserveComments: 'all'
             },
             scripts: {
-                 src: ['js/scripts/*.js'],
+                src: ['js/scripts/*.js'],
                 dest: 'js/build/scripts.js',
                 preserveComments: 'all'
             },
