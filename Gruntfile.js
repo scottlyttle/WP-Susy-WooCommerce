@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 }
             },
             files: {
-                src: ['js/scripts/*.js']
+                src: ['js/source/*.js']
             },
         },
         concat: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 preserveComments: 'all'
             },
             scripts: {
-                src: ['js/scripts/*.js'],
+                 src: ['js/scripts/*.js'],
                 dest: 'js/build/scripts.js',
                 preserveComments: 'all'
             },
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                 dest: 'js/build/plugins.min.js',
                 preserveComments: 'none'
             },
-            scripts: {
+            source: {
                 src: 'js/build/scripts.js',
                 dest: 'js/build/scripts.min.js',
                 preserveComments: 'none'
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                 cssDir: 'style/build',
                 javascriptsDir: 'js/build',
                 fontsDir: 'fonts',
-                imageDir: 'img'
+                imageDir: 'img',
                 environment: 'development',
                 relativeAssets: true,
                 noLineComments: true,
@@ -94,10 +94,30 @@ module.exports = function(grunt) {
                 'js/plugins/**/*.js',
                 '*.php'
             ],
-            tasks: ['jshint', 'concat', 'compass:dev'],
+            tasks: ['jshint', 'concat', 'compass:dev', 'cmq', 'copy'],
             options: {
                 livereload: true,
             }
+        },
+        cmq: {
+            options: {
+                log: false
+            },
+            your_target: {
+                files: {
+                    'style/build': ['style/build/style.css']
+                }
+            }
+        },
+        copy: {
+          main: {
+            expand: true,
+            cwd: './',
+            src: 'style/build/style.css',
+            dest: './',
+            flatten: true,
+            filter: 'isFile',
+          },
         },
     });
 
@@ -108,9 +128,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-livereload');
+    grunt.loadNpmTasks('grunt-combine-media-queries');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+
+    // Set base path
+    grunt.file.setBase('.');
 
     // Tasks
     grunt.registerTask('default', ['jshint', 'concat', 'compass:dev']);
-    grunt.registerTask('dev', ['jshint', 'concat', 'compass:dev']);
-    grunt.registerTask('prod', ['jshint', 'concat', 'uglify', 'compass:prod']);
+    grunt.registerTask('dev', ['jshint', 'concat', 'compass:dev', 'cmq', 'copy']);
+    grunt.registerTask('prod', ['jshint', 'concat', 'uglify', 'compass:prod', 'cmq', 'copy']);
 };
