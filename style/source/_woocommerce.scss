@@ -1,0 +1,27 @@
+/* ==============================================================
+		General Styles
+============================================================== */
+
+@import "woocommerce/messages";		// Messages and Errors
+@import "woocommerce/forms";		// General Form Styles
+
+/* ==============================================================
+		Product Pages
+============================================================== */
+
+@import "woocommerce/shop";			// Shop Page
+@import "woocommerce/product";		// Single Product
+
+/* ==============================================================
+		Cart and Checkout
+============================================================== */
+
+@import "woocommerce/cart";			// Cart
+@import "woocommerce/checkout";		// Checkout
+@import "woocommerce/order";		// Order Confirm and Review
+
+/* ==============================================================
+		Account
+============================================================== */
+
+@import "woocommerce/account";		// Account Pages
