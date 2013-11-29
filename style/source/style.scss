@@ -10,19 +10,19 @@ Version: 1.0
 // Tools
 @import "compass";
 @import "susy";
-@import "tools/base";
-@import "tools/variables";
+@import "base";
+@import "variables";
 
 // Setup
-@import "setup/reset";
-@import "setup/wordpress";
-@import "setup/icons";
-@import "setup/typography";
-@import "setup/woocommerce";
+@import "reset";
+@import "wordpress";
+@import "icons";
+@import "typography";
+@import "woocommerce";
 
 // Modules
-@import "modules/global";
+@import "global";
 
 // Layout
-@import "layout/header";
-@import "layout/footer";
+@import "header";
+@import "footer";
